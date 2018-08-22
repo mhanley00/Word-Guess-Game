@@ -1,7 +1,12 @@
+var chosenWord = function () {
 var khaledKeys = ["they", "blessed", "all the keys", "water your plants", "lion order", "live smooth", "all i do is win", "we the best"];
+return khaledKeys[Math.floor(Math.random() * khaledKeys.length)];
+};
+
 var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-var userBands = prompt("Do you have all the keys?").toLowerCase();
 var guesses = 10;
+var winCount = 0;
+var lossCount = 0;
 var userGuesses = 0;
 
 // This function is run whenever the user presses a key.
@@ -11,7 +16,7 @@ document.onkeyup = function (event) {
 
 
 
-
+// var userBands = prompt("Do you have all the keys?").toLowerCase();
 //     if (favoriteBands.indexOf(userBands) == -1) {
 //     alert("Nah. They're pretty lame.");
 // }
