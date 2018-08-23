@@ -12,7 +12,7 @@ var makeAnswerArr = function() {
     lettersLeft = word.length;
     return answerArr;
   };
-
+// if answerArr[i] = any letter, then _, ELSE " "
   //how to show in html how many guesses left?
   var showPlayerProgress = function() {
     alert(answerArray.join(" "));
@@ -59,12 +59,12 @@ var makeAnswerArr = function() {
   
   //write your functions here
   
-  var word = pickWord();
-  var answerArray = setupAnswerArray(word);
-  var remainingLetters = word.length;
+  var word = chosenWord();
+  var answerArray = makeAnswerArr(word);
+  var lettersLeft = word.length;
   var wrongGuesses = 0;
   
-  while (remainingLetters > 0) {
+  while (lettersLeft > 0) {
     showPlayerProgress(answerArray);
     var guess = getGuess();
     if (guess === null) {
@@ -75,7 +75,7 @@ var makeAnswerArr = function() {
       var guessArray = updateGameState(guess, word, answerArray, wrongGuesses);
       var correctGuesses = guessArray[0];
       var wrongGuesses = guessArray[1];
-      remainingLetters -= correctGuesses;
+      lettersLeft -= correctGuesses;
     }
     if (wrongGuesses > 10) {
       break;
@@ -93,7 +93,7 @@ var userGuesses = 0;
 // This function is run whenever the user presses a key.
 document.onkeyup = function (event) {
 // Determines which key was pressed.
-    var userGuess = event.key;
+    var userGuess = event.key;}
 
 
 
