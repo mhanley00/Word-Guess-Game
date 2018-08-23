@@ -11,17 +11,18 @@
   </head>
   <body>
 
-    <div id="game"></div>
-
     <h1>Do you have all the keys?</h1>
     <h3>They don't want you to win.</h3>
+    <h2></h2>
    
     <h4>Press any of the KEYS to get started</h4> 
     <!-- might revise this pun later -->
    
-    <h4>Wins</h4>
+    <h4>Wins:</h4>
+    <h5><span id="score"></span></h5>
    <!-- number of times they got the word correct -->
    <h4>Current Word</h4>
+   <h5><span id="chosenWord"></span></h5>
    <!-- underline for each letter of the current word,
 fill in correct letters-->
    <h4>Losses:</h4>
@@ -30,7 +31,10 @@ fill in correct letters-->
    <p>These are not the keys to this word</p>
    <!-- write function so that letters cannot be guessed more than once,
     letters guesses that were not in the index of the array -->
-
+    
+    <button id="button">New Question</button>
+    <p id="chosenWord"></p>
+    <p id="message"></p>
   </body>
 </html>
 
