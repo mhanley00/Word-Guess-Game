@@ -1,3 +1,6 @@
+document.onkeyup = function (event) {
+  
+var userGuess = event.key;
 var chosenWord = function () {
 var khaledKeys = ["they", "blessed", "all the keys", "water your plants", "lion order", "live smooth", "all i do is win", "we the best"];
 return khaledKeys[Math.floor(Math.random() * khaledKeys.length)];
@@ -69,8 +72,7 @@ var makeAnswerArr = function() {
     var guess = getGuess();
     if (guess === null) {
       break;
-    // } else if (guess.length !== 1) {
-    //   alert("Please enter a single letter.")
+    
     } else {
       var guessArray = updateGameState(guess, word, answerArray, wrongGuesses);
       var correctGuesses = guessArray[0];
@@ -84,44 +86,8 @@ var makeAnswerArr = function() {
   
   showAnswerAndCongratulatePlayer(answerArray, wrongGuesses);
 
-var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 var guesses = 10;
 var winCount = 0;
 var lossCount = 0;
 var userGuesses = 0;
-
-// This function is run whenever the user presses a key.
-document.onkeyup = function (event) {
-// Determines which key was pressed.
-    var userGuess = event.key;}
-
-
-
-// var userBands = prompt("Do you have all the keys?").toLowerCase();
-//     if (favoriteBands.indexOf(userBands) == -1) {
-//     alert("Nah. They're pretty lame.");
-// }
-// else {
-//     alert("YEAH I LOVE THEM!");
-// }
-
-// for reference:
-//     var likeSteak = confirm("Do you like steak?");
-//     var ofAge = prompt("How old are you?");
-
-//     if (likeSteak) {
-//         alert("Here's a steak sandwich");
-//     }
-
-//     else {
-//         alert("Here's a Tofu Stir-Fry");
-//     }
-
-//     if (ofAge >= 21) {
-//         alert("Kampai");
-//     }
-
-//     else {
-//         alert("No Sake for you!");
-
-//     }
+}

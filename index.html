@@ -5,36 +5,48 @@
     <title>DJ Khaled Hangman</title>
 
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="assets/javascript/game.js"></script>
-
+    <!-- <script src="assets/javascript/game-broke?.js"></script> -->
+    
   </head>
   <body>
+     <audio controls autoplay>
+      <source src="assets/DJKhaledAllIDoIsWin.mp3" type="audio/mpeg">
+  </audio>
 
-    <h1>Do you have all the keys?</h1>
-    <h3>They don't want you to win.</h3>
-    <h2></h2>
+<div class="container" id="main-bio">
+  <div class="row">
+    <div class="col-md-12"><h1>Do you have all the keys?</h1></div>
+      </div>
+  <div class="row">
+    <div class="col-md-12"><img src="assets/images/dj-khaled-you-smart.gif" alt="You Smart"></div>
+  </div>  
+  <div class="row">
+    <div class="col-md-12"><h3>They don't want you to win.</h3></div>
+  </div>  
+  <div class="row">
+    <div class="col-md-12"><h4>Press any of the KEYS🔑 to get started</h4></div>
+  </div>  
+    
    
-    <h4>Press any of the KEYS to get started</h4> 
-    <!-- might revise this pun later -->
-   
-    <h4>Wins:</h4>
+    <h4>Wins</h4>
     <h5><span id="score"></span></h5>
    <!-- number of times they got the word correct -->
    <h4>Current Word</h4>
    <h5><span id="chosenWord"></span></h5>
    <!-- underline for each letter of the current word,
 fill in correct letters-->
-   <h4>Losses:</h4>
+   <h4>Losses</h4>
    <p>Guesses Left</p> 
    <!-- 12 - guesses -->
    <p>These are not the keys to this word</p>
-   <!-- write function so that letters cannot be guessed more than once,
-    letters guesses that were not in the index of the array -->
+   
+    <h5><span id="gameOver"></span></h5>
+   
     
-    <button id="button">New Question</button>
-    <p id="chosenWord"></p>
-    <p id="message"></p>
+   
   </body>
 </html>
 
